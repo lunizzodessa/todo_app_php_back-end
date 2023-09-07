@@ -32,6 +32,13 @@ class TodoControllerTest extends TestCase
         $response->assertStatus(302);
     }
 
+//    public function testTodoComplete(): void
+//    {
+//        $response = $this->put('/todo/complete/1');
+//
+//        $response->assertStatus(200);
+//    }
+
 //    public function testTodoDelete(): void
 //    {
 //        $response = $this->delete('/todo/1');
@@ -39,10 +46,4 @@ class TodoControllerTest extends TestCase
 //        $response->assertStatus(200);
 //    }
 //
-//    public function testTodoComplete(): void
-//    {
-//        $response = $this->put('/todo/1/complete');
-//
-//        $response->assertStatus(200);
-//    }
 }
