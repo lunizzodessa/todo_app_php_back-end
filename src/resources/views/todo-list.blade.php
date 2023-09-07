@@ -31,6 +31,19 @@
             border: 1px black solid;
             padding: 5px;
         }
+
+        #todo-items tr td.delete a, #todo-items tr td.complete a {
+            color: white;
+        }
+
+        #todo-items tr td.complete {
+            background-color: green;
+        }
+
+        #todo-items tr td.delete {
+            background-color: red;
+        }
+
     </style>
 </head>
 <body class="antialiased">
@@ -53,11 +66,14 @@
     <h4>ToDo List</h4>
 
     <table id="todo-items" style="">
-        <!-- Copilot helped with the variable name -->
+        <!-- Copilot helped a bit with the variable name -->
+        <!-- But overall got a minimum amount of help in the view from Copilot -->
         @foreach ($todoItems as $key => $value)
             <tr>
                 <td>{{ $value->id }}</td>
                 <td>{{ $value->name }}</td>
+                <td class="complete"><a href="/todo/complete/{{$value->id}}">Complete</a></td>
+                <td class="delete"><a href="/todo/delete/{{$value->id}}">Delete</a></td>
             </tr>
         @endforeach
     </table>
