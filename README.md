@@ -1,5 +1,41 @@
+<h3 align="center">Test GitHub Copilot functionality with PHP</h3>
+Simple Laravel project to test the Copilot capabilities with PHP. Built on the top of the Docker starter https://github.com/ishaqadhel/docker-laravel-mysql-nginx-starter - see the original md and specification below.
+
+<h4>Run with Docker:</h4>
+* Clone the repository
+
+* Get [Docker](https://www.docker.com/) installed
+<br/><br/>
+* <strong>Execute and use the commands:</strong>
+  * docker-compose build
+  * docker-compose up -d
+  * Create the .env file
+  <br/>cp ./src/.env.example ./src/.env
+  <br/><br/>
+<strong>Login to the php container:</strong>
+  * docker exec -it php /bin/sh
+  * composer install
+  * chmod -R 777 storage
+  * php artisan key:generate
+  * To migrate and seed the DB: 
+  <br/>php artisan migrate:fresh --seed
+  * To run tests:
+  <br/>php artisan test<br/>
+  <i>Note: Tests will utilize the sqlite :memory: mode</i>
+  <br/><br/>
+  <strong>Login to the mysql container if needed:</strong>
+  * docker exec -it mysql /bin/sh
+  * mysql user: user
+  * mysql password: user
+  * mysql db: laravel_docker
+
+<h4>Run without Docker:</h4>
+  * point your PHP-enabled web server to the dir: ./src/public
+  * get the db of your choice up and running, configure the .env file as needed, migrate and seed it with the initial data
+* execute and use the commands from the "Run with Docker" section above as needed
+
+<h3>Original starter</h3>
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <h3 align="center">Docker Laravel MySQL Nginx Starter</h3>
 
