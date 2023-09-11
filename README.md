@@ -28,11 +28,13 @@ Simple Laravel project to test the Copilot capabilities with PHP. Built on the t
   * mysql user: user
   * mysql password: user
   * mysql db: laravel_docker
-
+    <br/><br/>
+  * Navigate to http://localhost:8001/todo to see the application front page
 <h4>Run without Docker:</h4>
   * point your PHP-enabled web server to the dir: ./src/public
   * get the db of your choice up and running, configure the .env file as needed, migrate and seed it with the initial data
-* execute and use the commands from the "Run with Docker" section above as needed
+  * execute and use the commands from the "Run with Docker" section above as needed
+  * navigate the configured schema, host / port + /todo route to access the application front page 
 
 <h3>Original starter</h3>
 <!-- PROJECT LOGO -->
